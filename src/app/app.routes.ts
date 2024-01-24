@@ -1,5 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
-import { ManageTasksComponent } from './manageTasks/manage-tasks.component';
+import { ManageTasksComponent } from './manageTasks/component/manage-tasks.component';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 

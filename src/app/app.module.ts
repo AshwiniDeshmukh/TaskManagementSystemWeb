@@ -12,8 +12,9 @@ import { NgIdleModule } from '@ng-idle/core';
 import { TextMaskModule } from 'angular2-text-mask';
 import { AppRoutingModule } from './app.routes';
 import { MatCardModule } from '@angular/material/card';
-import { ManageTasksComponent } from './manageTasks/manage-tasks.component';
+import { ManageTasksComponent } from './manageTasks/component/manage-tasks.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   ],
   imports: [
     MatCardModule,
+    MatTableModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
