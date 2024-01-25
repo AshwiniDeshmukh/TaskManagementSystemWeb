@@ -1,46 +1,43 @@
 <div class="my-theme">
-
   <mat-card>
-
-
     <mat-card-content>
-      <mat-table>
+      <mat-table [dataSource]="dataSource">
 
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns; let rowIndex = index;"></mat-row>
 
-        <ng-container matColumnDef="Assessment Name">
-          <mat-header-cell *matHeaderCellDef>{{ 'assessmentName'}}</mat-header-cell>
+        <ng-container matColumnDef="TaskName">
+          <mat-header-cell *matHeaderCellDef>TaskName</mat-header-cell>
           <mat-cell *matCellDef="let element;">
-            <span>{{element.name}}</span>
+            <span>{{element.title}}</span>
           </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="Last Modified">
-          <mat-header-cell *matHeaderCellDef>{{ 'lastModifiedColumn'}}</mat-header-cell>
+        <ng-container matColumnDef="Description">
+          <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
           <mat-cell *matCellDef="let element;">
-            <span></span>
+            <span>{{element.description}}</span>
           </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="Version">
-          <mat-header-cell *matHeaderCellDef>{{ 'version'}}</mat-header-cell>
+        <ng-container matColumnDef="DueDate">
+          <mat-header-cell *matHeaderCellDef>DueDate</mat-header-cell>
           <mat-cell *matCellDef="let element;">
-            <span></span>
+            <span>{{element.DueDate}}</span>
           </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="Last Modified By">
-          <mat-header-cell *matHeaderCellDef>{{ 'lastModifiedBy'}}</mat-header-cell>
+        <ng-container matColumnDef="TaskType">
+          <mat-header-cell *matHeaderCellDef>TaskType</mat-header-cell>
           <mat-cell *matCellDef="let element;">
-            <span></span>
+            <span>{{element.description}}</span>
           </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="Status">
-          <mat-header-cell *matHeaderCellDef>{{ 'status'}}</mat-header-cell>
+          <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
           <mat-cell *matCellDef="let element;">
-            <span></span>
+            <span>{{element.description}}</span>
           </mat-cell>
         </ng-container>
 
@@ -54,12 +51,7 @@
         </button>
 
 
-
-
       </mat-table>
-
-
-
     </mat-card-content>
   </mat-card>
 </div>

@@ -5,8 +5,7 @@ export interface CreateUserTaskRequest {
     title: string;
     description: string;
     dueDate: Date;
-    userAccountRefKeys: string[];
-    userTaskType: TaskType;
-    userTaskStatus: UserTaskStatus;
-    isActive: boolean;
+    userTaskType?: TaskType;
+    userTaskStatus?: UserTaskStatus;
+    isActive?: boolean;
 }

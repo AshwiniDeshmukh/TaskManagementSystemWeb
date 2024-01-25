@@ -13,7 +13,7 @@ export class TaskStoreService {
   constructor(private taskDataService: TaskDataService) {
   }
 
-  getUserTasks(userKey?: string): Observable<UserTaskReponse> {
+  getUserTasks(userKey: string): Observable<UserTaskReponse[]> {
     return this.taskDataService.getUserTasks(userKey);
   }
 

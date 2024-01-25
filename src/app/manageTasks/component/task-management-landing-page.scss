@@ -1,0 +1,266 @@
+@use '@angular/material' as mat;
+
+$primary: mat.define-palette(mat.$light-blue-palette, 500);
+$config: mat.define-typography-config();
+
+@mixin ct-sidenav-theme($theme) {
+    .ct-fill {
+        height: 100%;
+
+        & .ct-mat-drawer-content {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: map-get(mat.$blue-grey-palette, 50);
+        }
+
+        & .ct-mat-sidenav {
+            overflow: hidden;
+            background-color: mat.get-color-from-palette($primary);
+            padding: 0px;
+
+            & .ct-caretend-logo-wrapper {
+                width: 100%;
+                padding: $spacer * 2 $spacer * 0.75;
+                background-color: map-get(mat.$blue-grey-palette, 50);
+                height: $spacer * 6;
+
+                &>div {
+                    position: absolute;
+                    width: 236px;
+                    height: 148px;
+                    left: -9px;
+                    top: -27px;
+                    background: image("~/WS_CareTend_Stacked.png") no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            & .ct-sidenav-menu-items-container {
+                display: flex;
+                flex-wrap: wrap;
+
+                font-family: mat.font-family($config);
+                font-weight: mat.font-weight($config, button);
+                line-height: mat.line-height($config, button);
+
+                & a {
+                    width: 100%;
+                    text-align: left;
+                    color: map-get(mat.$grey-palette, 50);
+                }
+
+                & .ct-expandable-menu {
+                    padding-left: 36px;
+                }
+            }
+        }
+
+        & .ct-mat-sidenav-blue {
+            overflow: hidden;
+            background-color: #005D6F;
+            padding: 0px;
+
+            & .ct-caretend-navigation-header {
+                color: #FFFFFF;
+                font-size: 150%;
+                font-weight: 400;
+            }
+
+            & .ct-sidenav-field-items-container {
+                display: flex;
+                flex-wrap: wrap;
+
+                font-family: mat.font-family($config);
+                font-weight: mat.font-weight($config, button);
+                line-height: mat.line-height($config, button);
+
+                & a {
+                    width: 100%;
+                    text-align: left;
+                    color: #FFFFFF;
+                }
+
+                & .ct-expandable-menu {
+                    padding-left: 36px;
+                }
+            }
+        }
+
+        & .ct-mat-sidenav-red {
+            overflow: hidden;
+            background-color: #E53935;
+            padding: 0px;
+
+            & .ct-caretend-navigation-header {
+                color: #FFFFFF;
+                font-size: 150%;
+                font-weight: 400;
+            }
+
+            & .ct-sidenav-field-items-container {
+                display: flex;
+                flex-wrap: wrap;
+
+                font-family: mat.font-family($config);
+                font-weight: mat.font-weight($config, button);
+                line-height: mat.line-height($config, button);
+
+                & a {
+                    width: 100%;
+                    text-align: left;
+                    color: #FFFFFF;
+                }
+
+                & .ct-expandable-menu {
+                    padding-left: 36px;
+                }
+            }
+        }
+
+        & .ct-mat-sidenav-orange {
+            overflow: hidden;
+            background-color: #FF9900;
+            padding: 0px;
+
+            & .ct-caretend-navigation-header {
+                color: #FFFFFF;
+                font-size: 150%;
+                font-weight: 400;
+            }
+
+            & .ct-sidenav-field-items-container {
+                display: flex;
+                flex-wrap: wrap;
+
+                font-family: mat.font-family($config);
+                font-weight: mat.font-weight($config, button);
+                line-height: mat.line-height($config, button);
+
+                & a {
+                    width: 100%;
+                    text-align: left;
+                    color: #FFFFFF;
+                }
+
+                & .ct-expandable-menu {
+                    padding-left: 36px;
+                }
+            }
+        }
+
+        & .ct-mat-sidenav-green {
+            overflow: hidden;
+            background-color: #689F38;
+            padding: 0px;
+
+            & .ct-caretend-navigation-header {
+                color: #FFFFFF;
+                font-size: 150%;
+                font-weight: 400;
+            }
+
+            & .ct-sidenav-field-items-container {
+                display: flex;
+                flex-wrap: wrap;
+
+                font-family: mat.font-family($config);
+                font-weight: mat.font-weight($config, button);
+                line-height: mat.line-height($config, button);
+
+                & a {
+                    width: 100%;
+                    text-align: left;
+                    color: #FFFFFF;
+                }
+
+                & .ct-expandable-menu {
+                    padding-left: 36px;
+                }
+            }
+        }
+
+        & .ct-mat-sidenav-white {
+            overflow: hidden;
+            background-color: #ffffff;
+            padding: 0px;
+
+            & .ct-caretend-navigation-header {
+                color: #FFFFFF;
+                font-size: 150%;
+                font-weight: 400;
+            }
+
+            & .ct-sidenav-field-items-container {
+                display: flex;
+                flex-wrap: wrap;
+
+                font-family: mat.font-family($config);
+                font-weight: mat.font-weight($config, button);
+                line-height: mat.line-height($config, button);
+
+                & a {
+                    width: 100%;
+                    text-align: left;
+                    //color: #00a2ff;
+                }
+
+                & .ct-expandable-menu {
+                    padding-left: 36px;
+                }
+            }
+        }
+
+        & .ct-main-contain {
+            flex: 1 1 auto;
+            position: relative;
+            overflow-y: auto;
+            padding: 0 .5rem;
+        }
+    }
+
+    .ct-icon-color-white {
+        margin-top: 40%;
+        color: #FFFFFF;
+    }
+
+    .ct-position-fixed {
+        position: fixed !important;
+    }
+
+    .ct-slide-sheet-subheader {
+        margin-top: -2px;
+    }
+
+    .ct-header-group {
+        padding-left: 1rem;
+    }
+
+    .ct-header-actions {
+        padding-right: 1rem;
+        padding-top: 1rem;
+    }
+
+    .ct-side-nav-footer-container {
+        position: fixed;
+        bottom: 0;
+        width: 50%;
+        padding-bottom: 16px;
+    }
+
+    .ct-side-nav-header-title {
+        font-weight: 500;
+        font-style: normal;
+        font-size: 18px;
+    }
+
+    .ct-side-nav-header-subtitle {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+    }
+
+    .ct-side-nav-body-wrapper {
+        width: 100%;
+    }
+}

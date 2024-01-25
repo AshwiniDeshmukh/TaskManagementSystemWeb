@@ -1,9 +1,31 @@
-<div [ngClass]="{'dark-theme': true }">
+<mat-sidenav-container class="ct-fill">
+  <mat-sidenav appReadOnly class="col-6 col-md-4 col-lg-2" mode="side" #sidenav [opened]="true">
+
+    <div class="ct-sidenav-menu-items-container">
+      <a mat-button (click)="navigate('/manageTasks')">
+        Manage Tasks
+      </a>
+
+      <a mat-button (click)="navigate('/manageTasks')">
+        Manage User Tasks
+      </a>
+
+      <a mat-button (click)="navigate('/manageTasks')">
+        Admin
+      </a>
+
+    </div>
+
+  </mat-sidenav>
 
 
-  "Welcome to Task"
-  <button mat-button color="accent" (click)="navigate()">
-    Manage tasks for this User
-  </button>
-
-</div>
+  <mat-sidenav-content class="ct-mat-drawer-content">
+    <div class="ct-main-contain" cdkScrollable>
+      <div class="row no-gutters">
+        <div class="col-12">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

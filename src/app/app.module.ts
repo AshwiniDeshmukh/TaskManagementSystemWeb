@@ -18,12 +18,16 @@ import { MatTableModule } from '@angular/material/table';
 import { ManageTasksGridComponent } from './manageTasks/component/manage-tasks-grid.component';
 import { TaskManagementLandingPageComponent } from './manageTasks/component/task-management-landing-page';
 import { AppMaterialModule } from './_material/app-material.module';
+import { CreateNewTaskFormComponent } from './manageTasks/component/create-new-task-form.component';
+import { AppComponent } from './app.component';
+import { TaskStoreService } from './manageTasks/storeServices/task-store.service';
 
 @NgModule({
   declarations: [
     ManageTasksComponent,
     ManageTasksGridComponent,
-    TaskManagementLandingPageComponent
+    TaskManagementLandingPageComponent,
+    CreateNewTaskFormComponent
   ],
   imports: [
     BrowserModule,
@@ -38,16 +42,14 @@ import { AppMaterialModule } from './_material/app-material.module';
     AppMaterialModule
   ],
   providers: [
-
-
+    TaskStoreService,
     DatePipe,
-
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ],
-  bootstrap: [],
+  bootstrap: [AppComponent],
   exports: []
 })
 export class AppModule {

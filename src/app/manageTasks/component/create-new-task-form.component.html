@@ -1,0 +1,81 @@
+<div>
+  <h1>Add new Task</h1>
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="newUserTaskForm">
+        <div class="row">
+          <mat-form-field appearance="fill" class="col-12" floatLabel="always">
+            <div class="col-6"> <mat-label>"Task Status"</mat-label></div>
+
+            <div class="col-6"> <mat-select formControlName="taskStatus" placeholder="Select Task Status">
+                <mat-option>
+                  ToDo
+                </mat-option>
+                <mat-option>
+                  InProgress
+                </mat-option>
+                <mat-option>
+                  Completed </mat-option>
+              </mat-select>
+              <button mat-icon-button type="button">
+                <mat-icon>close</mat-icon>
+              </button>
+            </div>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <mat-label>Due Date</mat-label>
+
+          </div>
+          <div class="col-6">
+            <input matInput formControlName="dueDate" placeholder="DueDate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <mat-label>Task Title</mat-label>
+
+          </div>
+          <div class="col-6">
+            <input matInput formControlName="taskTitle" placeholder="TaskTitle">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <mat-label>Task Description</mat-label>
+
+          </div>
+          <div class="col-6">
+            <input matInput formControlName="taskDescription" placeholder="taskDescription">
+          </div>
+        </div>
+        <div class="row">
+          <mat-slide-toggle formControlName="showCompletedTasks">
+            'ShowCompletedTasks'</mat-slide-toggle>
+        </div>
+        <div class=row>
+          <div class="col-6">
+            <button mat-button color="primary">
+              viewUserTasks
+            </button>
+          </div>
+          <div class="col-6">
+            <span>Ashwini Dehsmukh</span>
+            <div>
+              <button mat-icon-button color="accent">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button aria-role="button" id="delete-dialog-icon">
+                <mat-icon color="accent">delete</mat-icon>
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <button mat-raised-button id="btn-cancel">Cancel</button>
+        <button type="button" mat-raised-button color="accent" id="btn-add" (click)="onSubmit()">Save</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
