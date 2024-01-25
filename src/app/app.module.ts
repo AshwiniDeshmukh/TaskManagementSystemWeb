@@ -17,6 +17,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { ManageTasksGridComponent } from './manageTasks/component/manage-tasks-grid.component';
 import { TaskManagementLandingPageComponent } from './manageTasks/component/task-management-landing-page';
+import { AppMaterialModule } from './_material/app-material.module';
 
 @NgModule({
   declarations: [
@@ -25,8 +26,6 @@ import { TaskManagementLandingPageComponent } from './manageTasks/component/task
     TaskManagementLandingPageComponent
   ],
   imports: [
-    MatCardModule,
-    MatTableModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
@@ -35,8 +34,8 @@ import { TaskManagementLandingPageComponent } from './manageTasks/component/task
     AppRoutingModule,
     NgIdleModule.forRoot(),
     TextMaskModule,
-    MatTreeModule,
-    ScrollingModule
+    ScrollingModule,
+    AppMaterialModule
   ],
   providers: [
 
