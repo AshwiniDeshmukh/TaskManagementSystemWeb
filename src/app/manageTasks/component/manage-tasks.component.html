@@ -1,36 +1,21 @@
-<div class="my-theme">
-
+<div class="user-box">
   <mat-card>
-    <div class="mat-subheading-2">List of Tasks
-    </div>
 
-    <mat-card-content>
+    <div class="col-12">
+      <mat-card class="col-12">
+        <div class="d-flex header-container">
+          <h3> Manage Tasks </h3>
+        </div>
 
-      <div class="col-12">
-        <mat-card class="col-12">
-          <div class="d-flex header-container">
-            <span> Manage Tasks </span>
+        <mat-card-content>
+          <app-manage-task-grid></app-manage-task-grid>
+        </mat-card-content>
 
-
-            <button mat-button color="accent">
-              Create a New Task
-            </button>
-
-          </div>
-
-          <mat-card-content>
-            <mat-slide-toggle [checked]="false">
-              Show Completed Tasks
-            </mat-slide-toggle>
-            <app-manage-task-grid></app-manage-task-grid>
-          </mat-card-content>
-
-          <div class="no-gutters row">
-            <!-- <mat-paginator #paginator class="col-12" [length]="10" [pageSize]="10" [pageSizeOptions]="0"
+        <div class="no-gutters row">
+          <!-- <mat-paginator #paginator class="col-12" [length]="10" [pageSize]="10" [pageSizeOptions]="0"
               [pageIndex]="0"></mat-paginator> -->
-          </div>
-        </mat-card>
-      </div>
-    </mat-card-content>
+        </div>
+      </mat-card>
+    </div>
   </mat-card>
 </div>

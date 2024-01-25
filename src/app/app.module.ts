@@ -1,6 +1,6 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { DatePipe, DecimalPipe } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { ErrorHandler, Inject, Injector, NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DateAdapter } from '@angular/material/core';
@@ -21,6 +21,7 @@ import { AppMaterialModule } from './_material/app-material.module';
 import { CreateNewTaskFormComponent } from './manageTasks/component/create-new-task-form.component';
 import { AppComponent } from './app.component';
 import { TaskStoreService } from './manageTasks/storeServices/task-store.service';
+import { TaskDataService } from './manageTasks/dataServices/task-data.service';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,9 @@ import { TaskStoreService } from './manageTasks/storeServices/task-store.service
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     NgIdleModule.forRoot(),
@@ -43,13 +44,14 @@ import { TaskStoreService } from './manageTasks/storeServices/task-store.service
   ],
   providers: [
     TaskStoreService,
-    DatePipe,
+    TaskDataService,
+    DatePipe
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [],
   exports: []
 })
 export class AppModule {

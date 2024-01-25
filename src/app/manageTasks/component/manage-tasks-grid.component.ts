@@ -5,7 +5,8 @@ import { TaskStoreService } from '../storeServices/task-store.service';
 
 @Component({
   selector: 'app-manage-task-grid',
-  templateUrl: './manage-tasks-grid.component.html'
+  templateUrl: './manage-tasks-grid.component.html',
+  styleUrls: ['./task-management-landing-page.scss']
 })
 export class ManageTasksGridComponent {
 

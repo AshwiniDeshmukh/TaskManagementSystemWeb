@@ -16,9 +16,9 @@ export class TaskDataService extends DataService {
   }
 
   getUserTasks(userKey: string): Observable<UserTaskReponse[]> {
-    const url = "https://localhost:5001/api/taskmanagement";
+    const url = "https://localhost:5001/api/taskmanagement/UserTask/" + userKey;
     let httpParams = new HttpParams().set('userKey', userKey);
-    return this.http.get<UserTaskReponse[]>(url, this.httpOptions('UserTask', httpParams))
+    return this.http.get<UserTaskReponse[]>(url)
       .pipe(
         map(res => res)
       );

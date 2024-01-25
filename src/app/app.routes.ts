@@ -8,7 +8,7 @@ import { APP_BASE_HREF } from '@angular/common';
 
 export const routes: Routes = [
     {
-        path: '', component: ManageTasksComponent,
+        path: '', component: TaskManagementLandingPageComponent,
         children: [
             { path: 'manageTasks', component: ManageTasksComponent, data: { title: 'Manage Tasks' } },
             { path: 'addNewTask', component: CreateNewTaskFormComponent, data: { title: 'Add new Task' } },

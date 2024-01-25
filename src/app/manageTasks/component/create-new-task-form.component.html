@@ -1,13 +1,13 @@
-<div>
-  <h1>Add new Task</h1>
+<div class="user-box">
+  <h3>Add new Task</h3>
   <mat-card>
     <mat-card-content>
       <form [formGroup]="newUserTaskForm">
         <div class="row">
           <mat-form-field appearance="fill" class="col-12" floatLabel="always">
-            <div class="col-6"> <mat-label>"Task Status"</mat-label></div>
+            <div class="col-3"> <mat-label>Task Status</mat-label></div>
 
-            <div class="col-6"> <mat-select formControlName="taskStatus" placeholder="Select Task Status">
+            <div class="col-3"> <mat-select formControlName="taskStatus" placeholder="Select Task Status">
                 <mat-option>
                   ToDo
                 </mat-option>
@@ -52,7 +52,7 @@
         </div>
         <div class="row">
           <mat-slide-toggle formControlName="showCompletedTasks">
-            'ShowCompletedTasks'</mat-slide-toggle>
+            ShowCompletedTasks</mat-slide-toggle>
         </div>
         <div class=row>
           <div class="col-6">
@@ -61,10 +61,10 @@
             </button>
           </div>
           <div class="col-6">
-            <span>Ashwini Dehsmukh</span>
+
             <div>
               <button mat-icon-button color="accent">
-                <mat-icon>edit</mat-icon>
+                <mat-icon (click)="onSubmit()">edit</mat-icon>
               </button>
               <button mat-icon-button aria-role="button" id="delete-dialog-icon">
                 <mat-icon color="accent">delete</mat-icon>
@@ -74,7 +74,7 @@
           </div>
         </div>
         <button mat-raised-button id="btn-cancel">Cancel</button>
-        <button type="button" mat-raised-button color="accent" id="btn-add" (click)="onSubmit()">Save</button>
+        <button type="button" mat-raised-button color="accent" id="btn-add" (focusOut)="onSubmit()">Save</button>
       </form>
     </mat-card-content>
   </mat-card>
