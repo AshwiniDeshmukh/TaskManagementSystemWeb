@@ -31,7 +31,7 @@ export class CreateNewTaskFormComponent implements OnInit {
 
   onSubmit(): void {
     const userKey = "0afe0ac9-f952-415f-b8cb-5f371f89204e";
-    const createTaskRequest: CreateUserTaskRequest = { title: "first", description: "fr", dueDate: new Date("2013/09/23") };
+    const createTaskRequest: CreateUserTaskRequest = this.newUserTaskForm.getRawValue();
     this.taskStoreService.createUserTask(userKey, createTaskRequest);
   }
 }

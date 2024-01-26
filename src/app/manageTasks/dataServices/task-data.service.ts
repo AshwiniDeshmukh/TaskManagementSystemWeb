@@ -25,11 +25,11 @@ export class TaskDataService extends DataService {
   }
 
   createUserTask(userKey: string, createUserTaskRequest: CreateUserTaskRequest): Observable<ModelIdResponse> {
-    const url = "https://localhost:5001/api/taskmanagement";
+    const url = "https://localhost:5001/api/taskmanagement/UserTask/" + userKey;
     let httpParams = new HttpParams().set('userKey', userKey);
     const payLoad: string = JSON.stringify({ 'createUserTaskRequest': createUserTaskRequest });
 
-    return this.http.post<ModelIdResponse>(url, payLoad, this.httpOptions('UserTask', httpParams))
+    return this.http.post<ModelIdResponse>(url, payLoad)
       .pipe(
         map(res => res)
       );
